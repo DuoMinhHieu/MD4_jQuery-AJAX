@@ -1,3 +1,50 @@
+/*#display-create {*/
+/*    display: none;*/
+/*    float: left;*/
+/*}*/
+
+/*#display-list {*/
+/*    width: 600px;*/
+/*    margin: auto;*/
+/*    border: 2px solid;*/
+/*    border-collapse: collapse;*/
+/*}*/
+
+/*#display-list tr, #display-list th, #display-list td {*/
+/*    border: 1px solid;*/
+/*    border-collapse: collapse;*/
+/*    padding-left: 10px;*/
+/*}*/
+
+/*.btn {*/
+/*    text-align: center;*/
+/*}*/
+
+/*button {*/
+/*    margin: 10px;*/
+/*}*/
+
+/*#div-btn {*/
+/*    width: 600px;*/
+/*    margin-left: 470px;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+
+/*h1 {*/
+/*    text-align: center;*/
+/*}*/
+
+/*#title {*/
+/*    display: none;*/
+/*}*/
+
+/*#add-smartphone {*/
+/*    display: none;*/
+/*    width: 300px;*/
+/*    margin: auto;*/
+/*}*/
+
+
 #display-create {
     display: none;
     float: left;
@@ -26,8 +73,8 @@ button {
 
 #div-btn {
     width: 600px;
-    margin-left: 470px;
-    margin-bottom: 10px;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 h1 {
@@ -42,4 +89,133 @@ h1 {
     display: none;
     width: 300px;
     margin: auto;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #B8860B, #8B0000);
+    color: #0A0A0A;
+    text-align: center;
+    padding: 20px;
+    animation: backgroundAnimation 5s infinite alternate;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    animation: glow 1s infinite alternate;
+}
+
+form#add-smartphone {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: none;
+    margin: 20px auto;
+    width: 300px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+form#add-smartphone table {
+    width: 100%;
+}
+
+form#add-smartphone label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form#add-smartphone input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+form#add-smartphone input[type="submit"] {
+    background: #0A0A0A;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    animation: sparkle 2s infinite alternate;
+}
+
+form#add-smartphone input[type="submit"]:hover {
+    background: #8B0000;
+}
+
+#div-btn {
+    margin-bottom: 20px;
+}
+
+#div-btn button {
+    background: #0A0A0A;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: glow 1.5s infinite alternate;
+}
+
+#div-btn button:hover {
+    background: #8B0000;
+}
+
+#smartphoneList {
+    margin-top: 20px;
+    text-align: left;
+    padding: 10px;
+    background: #ffffff(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes backgroundAnimation {
+    40% {
+        /*background: linear-gradient(135deg, #f06, #4a90e2);*/
+        background: #8B0000;
+    }
+    60% {
+        background: #B8860B;
+        /*background: linear-gradient(135deg, #4a90e2, #f06);*/
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #8B0000, 0 0 10px #8B0000, 0 0 20px #B8860B, 0 0 30px #B8860B, 0 0 40px #B8860B, 0 0 50px #B8860B, 0 0 60px #B8860B, 0 0 70px #B8860B;
+    }
+    100% {
+        text-shadow: 0 0 10px #8B0000, 0 0 20px #8B0000, 0 0 30px #B8860B, 0 0 40px #B8860B, 0 0 50px #B8860B, 0 0 60px #B8860B, 0 0 70px #B8860B, 0 0 80px #B8860B;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes sparkle {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.4);
+    }
 }
